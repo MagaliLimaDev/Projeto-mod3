@@ -24,12 +24,6 @@ HAVING Count(*) > 1
 ORDER BY QtdRepeticoes desc
 limit 5;
 
-#não sei o que é 
-SELECT season, year, gamelength,  Count(*) as QtdRepeticoes FROM league.matchinfo
-GROUP BY season, year, gamelength
-HAVING Count(*)> 95
-ORDER BY QtdRepeticoes desc
-limit 5;
 
 #Quais foram os campeões que mais mataram no lol?
 
@@ -73,4 +67,12 @@ GROUP BY ban_5
 HAVING Count(*) > 1
 ORDER BY QtdRepeticoes desc
 limit 5;
+
+#Quais os tipos de dragões que foram capturados mais vezes?
+SELECT  type, Count(*) as QtdRepeticoes FROM league.monsters
+GROUP BY  type
+HAVING Count(*) >20
+ORDER BY QtdRepeticoes desc
+limit 5;
+
 
