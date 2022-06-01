@@ -8,6 +8,14 @@ HAVING Count(*) > 1
 order by QtdRepeticoes desc
 limit 5;
 
+#Quais são os jungles mais jogados no time red do lol?
+
+SELECT redJungleChamp, Count(*) as QtdRepeticoes FROM league.matchinfo
+GROUP BY redJungleChamp
+HAVING Count(*) > 1
+order by QtdRepeticoes desc
+limit 5;
+
 #Quais foram as vitimas que mais morreram?
 
 SELECT victim, Count(*) as QtdRepeticoes FROM league.kills
